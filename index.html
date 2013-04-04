@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0 maximum-scale=1 and user-scalable=no"> 
+		<meta name="apple-mobile-web-app-capable" content="yes" />  
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />  
+		<link rel="apple-touch-icon-precomposed" href="icon2.png"/>  
+		<link rel="apple-touch-startup-image" href="img/icons/splash.png" />
+		<title></title>
+		<!--fonts-->
+		<!--styles-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css?22">
+		<!--js-->
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		
+		<script src="js/moment.js" type="text/javascript"></script>
+		<script src="js/swipe2.js?51" type="text/javascript"></script>
+		<script src="js/transit.js" type="text/javascript"></script>
+		<script src="js/timer.js" type="text/javascript"></script>
+		<script src="js/templates.js?39" type="text/javascript"></script>
+		<script src="js/easy-pie.jquery.js?39" type="text/javascript"></script>
+		<script src="js/chart.min.js" type="text/javascript"></script>
+		<script src="js/spin.min.js?39" type="text/javascript"></script>
+		<script src="js/scripts.js?39" type="text/javascript"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="dimmer"></div>
+			<div id="change-weight">
+				<div class="box half first">
+					<h3>current</h3>
+					<input type="tel" id="c_weight" maxlength="3" value="85" />
+				</div>
+				<div class="box half">
+					<h3>goal</h3>
+					<input type="tel" id="g_weight" maxlength="3" value="90" />
+				</div>
+				<div class="confirms">
+					<a href="#" style="margin-right:5%">done</a>
+					<a href="#">cancel</a>
+					<div class="cBoth"></div>
+				</div>
+				<div class="cBoth"></div>
+			</div>
+			<div id="indicators">
+				<ul>
+					<!--fill me-->
+				</ul>
+			</div>
+			<section id="vertical-slider" class="deck">
+				
+				<section id="workouts">
+					<div id="workouts-slider" class="swipe">
+						<ul class="swipe-wrap">
+							<li class="card first">
+							<div class="initial">
+								<h1>Workouts</h1>
+								<a id="perform-workout" class="button" data-action="perform-workout">perform workout</a>
+							</div>
+							<div class="performed">
+								<h2>Workout done!</h2>
+							</div>
+							<div class="inner">
+								<div class="perform-q">
+									<p id="time-elapsed"><span id="hours"></span> h <span id="minutes"></span> m</p>
+									<a href="#" class="button" data-action="end-workout">end workout</a>
+								</div>
+							</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				
+				<section id="start" class="card first">
+					<h1>Stats</h1>
+					<div class="inner-wrap">
+							
+						<div id="weight-progress" class="box full">
+							<h2>Weight</h2>
+							<a href="#" id="edit-weight" class="entypo">⚙</a>
+							<div id="progress">
+								<div id="chart-wrap">
+									<canvas id="weight-chart" width="270" height="120"></canvas>
+								</div>
+								<div id="current-weight">
+									<p>83</p>
+								</div>
+							</div>
+						</div>
+	
+						<div id="last-run"class="box half boxfirst">
+							<h2>last run</h2>
+							<p>friday</p>
+							<a href="#" id="reload-nike">Re-sync</a>
+						</div>
+						<div id="last-workout" class="box half">
+							<h2>last workout</h2>
+							<p>saturday</p>
+						</div>
+						<div id="meals-today"class="box half boxfirst">
+							<h2>meals today</h2>
+							<p>3</p>
+						</div>
+						<div id="last-meal" class="box half">
+							<h2>last meal</h2>
+							<p>breakfast</p>
+						</div>
+
+						<div class="cBoth"></div>
+					</div>
+				</section>
+				
+				<section id="meals" class="card first">
+					<h1>Meals</h1>
+					<div id="meals-slider" class="swipe">
+						<ul class="swipe-wrap">
+							<li class="first">
+								<div class="parappa">
+									<a href="#" data-meal="Breakfast">Breakfast</a>
+									<div class="chart" data-percent="0"></div>
+								</div>
+							</li>
+							<li class="first" data-meal="Lunch">
+								<div class="parappa">
+									<a href="#">Lunch</a>
+									<div class="chart" data-percent="50"></div>
+								</div>
+							</li>
+							<li class="first" data-meal="Dinner">
+								<div class="parappa">
+									<a href="#">Dinner</a>
+									<div class="chart" data-percent="70"></div>
+								</div>
+							</li>
+							<li class="first" data-meal="Snack">
+								<div class="parappa">
+									<a href="#">Snack</a>
+									<div class="chart" data-percent="70"></div>
+								</div>
+							</li>
+							<li class="first" data-meal="Protein">
+								<div class="parappa">
+									<a href="#">Protein</a>
+									<div class="chart" data-percent="30"></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div id="blue-btn">
+						<a href="#" id="log-meal">Eat</a>
+					</div>
+				</section>
+			
+			</section>
+		</div>
+	</body>
+</html>
